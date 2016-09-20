@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gmail.jasekurasz.bestbefore.EnterNewItem"
+    android:background="@drawable/gray_sand">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemName"
+        android:hint="Enter Item Name"
+        android:textColorHint="@color/white"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/white"
+        android:layout_alignParentStart="true"
+        android:imeOptions="actionDone"
+        android:singleLine="true"/>
+
+    <TextView android:text="@string/select_use_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/itemName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"/>
+
+    <ImageView
+        android:id="@+id/itemPic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/no_img"
+        android:layout_below="@+id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:onClick="openCamera"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:id="@+id/saveButton"
+        android:layout_below="@+id/itemPic"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
